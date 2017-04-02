@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Jira exporter Options</title></head>
+<style>
+    .type {
+     font-weight: bold;
+    }
+</style>
+<body>
+
+<span class="type">Separator:</span>(default ";" - used for splitting columns)<br/>
+<input id="separator" type="text"/><br/>
+
+<span class="type">Dot to comma columns:</span><br/>
+(default "Custom field (Story Points)" - separate with comma)<br/>
+<input id="commaColumns" type="text"/><br/>
+
+<br/>
+<button id="save">Save</button>
+<div id="status"></div>
+
+<script src="options.js"></script>
+</body>
+</html>
