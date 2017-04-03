@@ -135,7 +135,7 @@
             str += '\n' + rowString;
 
         }
-        return str;
+        return '\ufeff' + str; //Adds BOM, TODO: add checkbox to options in settings to deactivate
     }
 
     function getPageContents(callback, url, params) {
@@ -152,7 +152,7 @@
     function download(path) {
         getPageContents(function (result) {
             map(result, function (str) {
-                var uri = 'data:text/csv;charset=utf-16,' + encodeURI(str);
+                var uri = 'data:text/csv;charset=utf-8,' + encodeURI(str);
                 var downloadLink = document.createElement("a");
                 downloadLink.href = uri;
                 downloadLink.download = "jira_export.csv";
