@@ -152,7 +152,7 @@
     function download(path) {
         getPageContents(function (result) {
             map(result, function (str) {
-                var uri = 'data:text/csv;charset=utf-8,' + encodeURI(str);
+                var uri = 'data:text/csv;charset=utf-16,' + encodeURI(str);
                 var downloadLink = document.createElement("a");
                 downloadLink.href = uri;
                 downloadLink.download = "jira_export.csv";
